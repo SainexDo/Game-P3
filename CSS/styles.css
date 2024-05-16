@@ -1,0 +1,13 @@
+#espacioJuego {
+    background-color: gray;
+    width: 30%;
+    height: 350px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 35%;
+}
+
+.cubitos {
+    border: solid 2px red;
+}
