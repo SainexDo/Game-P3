@@ -11,10 +11,66 @@
     padding: 1.5% 1.5% 1.5% 1.5%;
     border-radius: 12px;
     font-size: 45px;
+    font-family: impact;
+}
+
+#btnConfig {
+    margin-left: 97%;
+    margin-top: 0.5%;
+    width: 2.9%;
+    height: 37px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+#imgConfig {
+    width: 35px;
+}
+
+
+
+/* MODAL */
+#modalConfig {
+    margin-left: 81%;
+    margin-top: 4%;
+    width: 15%;
+    height: 40%;
+    background-color: rgb(220, 219, 219);
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    gap: 20%;
+}
+
+#stylesTicTacToe {
+    margin-top: 20%;
+    background-color: darkcyan;
+    border-radius: 25px;
+    border: solid 3.5px white;
+    text-align: center;
+    padding: 5%;
+}
+
+#salirDelModalConfig {
+    margin-top: 30%;
+    background-color: darkcyan;
+    border-radius: 25px;
+    border: solid 3.5px #ffffff;
+    text-align: center;
+    padding: 5%;
 }
 
 #titulo {
     text-align: center;
+}
+
+/* MODAL DE ESTILOS */
+#modalStyles {
+    width: 20%;
+    height: 200px;
+    background-color: gray;
+    color: white;
 }
 
 #cuadrito1 {

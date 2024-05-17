@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
+
+    <div onmouseover=window.modalConfig.showModal() id="btnConfig"><img id="imgConfig" src="IMG/icons8-settings-48.png" alt=""></div>
+
+    <dialog id="modalConfig">
+        <div onclick="window.modalStyles.show()" id="stylesTicTacToe">Estilos</div>
+        <div id="salirDelModalConfig" onclick="window.modalConfig.close()">Salir</div>
+    </dialog>
+
+    <dialog id="modalStyles">
+        <div>Default</div>
+        <div>Neon</div>
+        <div>Calavera</div>
+        <div>Anime</div>
+    </dialog>
+
     <h1 id="titulo">TicTacToe</h1>
 
 
