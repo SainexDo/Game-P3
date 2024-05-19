@@ -1,4 +1,5 @@
-.espacioJuego {
+/*//////////////// ESTILOS DE JUEGO ////////////////*/
+#juegoDefault {
     margin-left: 35%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -14,6 +15,27 @@
     font-family: impact;
 }
 
+#modalCalavera {
+    position: absolute;
+}
+
+#juegoNeon {
+    background-color: #00ccff;
+    margin-left: 35%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 30%;
+    height: 350px;
+    max-height: fit-content;
+    margin-top: 5%;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    border-radius: 12px;
+    font-size: 50px;
+    font-family: impact;
+}
+/*//////////////// FINAL DE ESTILOS ////////////////*/
+
 #btnConfig {
     margin-left: 97%;
     margin-top: 0.5%;
@@ -26,8 +48,6 @@
 #imgConfig {
     width: 35px;
 }
-
-
 
 /* MODAL */
 #modalConfig {
@@ -44,12 +64,12 @@
 }
 
 #stylesTicTacToe {
-    margin-top: 20%;
+    margin-top: 0%;
     background-color: darkcyan;
     border-radius: 25px;
     border: solid 3.5px white;
     text-align: center;
-    padding: 5%;
+    padding: 3%;
 }
 
 #salirDelModalConfig {
@@ -58,8 +78,18 @@
     border-radius: 25px;
     border: solid 3.5px #ffffff;
     text-align: center;
-    padding: 5%;
+    padding: 3%;
 }
+
+#btnReintentar {
+    margin-top: 30%;
+    background-color: darkcyan;
+    border-radius: 25px;
+    border: solid 3.5px #ffffff;
+    text-align: center;
+    padding: 3%;
+}
+
 
 #titulo {
     text-align: center;
@@ -67,10 +97,13 @@
 
 /* MODAL DE ESTILOS */
 #modalStyles {
-    width: 20%;
-    height: 200px;
-    background-color: gray;
-    color: white;
+    margin-left: 81%;
+    margin-top: 4%;
+    width: 16%;
+    height: 40%;
+    background-color: rgb(190, 188, 188);
+    color: rgb(120, 51, 51);
+    border-radius: 20px;
 }
 
 #cuadrito1 {
