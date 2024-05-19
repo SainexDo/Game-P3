@@ -1,0 +1,174 @@
+/*//////////////// ESTILOS DE JUEGO ////////////////*/
+#juegoDefault {
+    margin-left: 35%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 30%;
+    height: 350px;
+    max-height: fit-content;
+    margin-top: 5%;
+    background-color: #ecf0f1;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    border-radius: 12px;
+    font-size: 45px;
+    font-family: impact;
+}
+
+#modalCalavera {
+    position: absolute;
+}
+
+#juegoNeon {
+    background-color: #00ccff;
+    margin-left: 35%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 30%;
+    height: 350px;
+    max-height: fit-content;
+    margin-top: 5%;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    border-radius: 12px;
+    font-size: 50px;
+    font-family: impact;
+}
+/*//////////////// FINAL DE ESTILOS ////////////////*/
+
+#btnConfig {
+    margin-left: 97%;
+    margin-top: 0.5%;
+    width: 2.9%;
+    height: 37px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 10px;
+}
+
+#imgConfig {
+    width: 35px;
+}
+
+/* MODAL */
+#modalConfig {
+    margin-left: 81%;
+    margin-top: 4%;
+    width: 15%;
+    height: 40%;
+    background-color: rgb(220, 219, 219);
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    gap: 20%;
+}
+
+#stylesTicTacToe {
+    margin-top: 0%;
+    background-color: darkcyan;
+    border-radius: 25px;
+    border: solid 3.5px white;
+    text-align: center;
+    padding: 3%;
+}
+
+#salirDelModalConfig {
+    margin-top: 30%;
+    background-color: darkcyan;
+    border-radius: 25px;
+    border: solid 3.5px #ffffff;
+    text-align: center;
+    padding: 3%;
+}
+
+#btnReintentar {
+    margin-top: 30%;
+    background-color: darkcyan;
+    border-radius: 25px;
+    border: solid 3.5px #ffffff;
+    text-align: center;
+    padding: 3%;
+}
+
+
+#titulo {
+    text-align: center;
+}
+
+/* MODAL DE ESTILOS */
+#modalStyles {
+    margin-left: 81%;
+    margin-top: 4%;
+    width: 16%;
+    height: 40%;
+    background-color: rgb(190, 188, 188);
+    color: rgb(120, 51, 51);
+    border-radius: 20px;
+}
+
+#cuadrito1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+}
+
+#cuadrito2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: solid;
+    border-right: solid;
+    border-bottom: solid;
+}
+
+#cuadrito3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+}
+
+#cuadrito4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+}
+
+#cuadrito5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+    border-left: solid;
+    border-right: solid;
+}
+
+#cuadrito6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+}
+
+#cuadrito7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cuadrito8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: solid;
+    border-left: solid 2px;
+}
+
+#cuadrito9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

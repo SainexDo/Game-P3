@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-    <h1>comparar</h1>
+
+    <div onmouseover=window.modalConfig.show() id="btnConfig"><img id="imgConfig" src="IMG/icons8-settings-48.png" alt=""></div>
+
+    <dialog id="modalConfig">
+        <div onclick="window.modalStyles.show()" id="stylesTicTacToe">Estilos</div>
+        <div id="btnReintentar">Reintentar</div>
+        <div id="salirDelModalConfig" onclick="window.modalConfig.close()">Salir</div>
+    </dialog>
+
+    <dialog id="modalStyles">
+        <div>Default</div>
+        <div>Neon</div>
+        <button id="modalCalavera">Calavera</button>
+        <div>Anime</div>
+    </dialog>
+
+    <h1 id="titulo">TicTacToe</h1>
+
+
+    <div id="juegoDefault">
+        <div onclick="c1vez()" id="cuadrito1"></div>
+        <div onclick="c2vez()" id="cuadrito2"></div>
+        <div onclick="c3vez()" id="cuadrito3"></div>
+
+        <div onclick="c4vez()" id="cuadrito4"></div>
+        <div onclick="c5vez()" id="cuadrito5"></div>
+        <div onclick="c6vez()" id="cuadrito6"></div>
+
+        <div onclick="c7vez()" id="cuadrito7"></div>
+        <div onclick="c8vez()" id="cuadrito8"></div>
+        <div onclick="c9vez()" id="cuadrito9"></div>
+    </div>
+
+
+
+
+    <script src="JS/script.js"></script>
 </body>
 </html>
