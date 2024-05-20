@@ -12,35 +12,32 @@ let c9 = document.getElementById('cuadrito9')
 let matriz = [
     [c1, c2, c3],
     [c4, c5, c6],
-    [c7, c8, c9],
-] 
+    [c7, c8, c9]
+]
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-
 let tt = true;
-
 
 let clave1 = true;
 
 function c1vez() {
     if (clave1 === true) {
         if (tt === true) {
-            matriz[0][0] = "X";
+            matriz[0][0] = 'X';
             c1.innerHTML = 'X'
             tt = false;
         } else if (tt == false) {
             matriz[0][0] = "O"
+           
             c1.innerHTML = 'O'
+
             tt = true;
         }
+
         clave1 = false;
     }
-   
     if (primeraFila(matriz)) {
         alert("HAS GANADO !!")
                 tt = null;
@@ -58,6 +55,9 @@ function c1vez() {
     }
 }
 
+
+
+console.log(matriz[0][0]);
 
 let clave2 = true;
 
@@ -91,6 +91,7 @@ function c2vez() {
 let clave3 = true;
 
 function c3vez() {
+    Math
     if (clave3 === true) {
         if (tt === true) {
             matriz[0][2] = "X"
@@ -306,11 +307,9 @@ function c9vez() {
     if (primeraDiagonal(matriz)) {  // Aquí es donde se llama la funcion que contiene el for y contadores
         alert("HAS GANADO !!")
                 tt = null;
-                                empatar = false;    // dando una alerta de que se ha ganado.
+                empatar = false;    // dando una alerta de que se ha ganado.
     }
-    if (empate(matriz)) {  // Aquí es donde se llama la funcion que contiene el for y contadores
-        alert("Has empatado")
-    }
+
 }
 
 function primeraFila(matriz) {
@@ -466,7 +465,8 @@ let empatar = true;
 function empate(matriz) {
     if (empatar == true) {
         for (let i = 0; i < matriz.length; i++) {
-            if (matriz[0][0][i] != '' && matriz[0][1][i] != '' && matriz[0][2][i] != '' && matriz[1][0][i] != '' && matriz[1][1][i] != '' && matriz[1][2][i] != '' && matriz[2][0][i] != '' && matriz[2][1][i] != '' && matriz[2][2][i] != '') {
+            if (matriz[0][i] != '' && matriz[1][i] != '' && matriz[2][i]  != '') {
+                console.log('jaja');
             }
             return true;
         }
@@ -477,17 +477,14 @@ function empate(matriz) {
 
 
 
-let juegoDefault = document.getElementById('juegoDefault')
-let juegoNeon = document.getElementById('juegoNeon')
-let modalCalavera = document.getElementById('modalCalavera')
-let camb = document.getElementById('camb')
 
-modalCalavera.addEventListener('click', function tere() {
-    juegoDefault.setAttribute(juegoDefault.style.backgroundColor = 'black', 'black')
-})
-modalCalavera.addEventListener('click', function tere() {
-    juegoDefault.setAttribute(juegoDefault.style.color = 'red', 'red')
-})
+
+
+
+// matriz[0][0][i] != '' && matriz[0][1][i] != '' && matriz[0][2][i] != '' && matriz[1][0][i] != '' && matriz[1][1][i] != '' && matriz[1][2][i] != '' && matriz[2][0][i] != '' && matriz[2][1][i] != '' && matriz[2][2][i] != ''
+
+
+
 
 
 

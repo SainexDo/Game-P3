@@ -1,8 +1,23 @@
-
+body:hover {
+    .titulo {
+        font-size: 70px;
+        margin-top: 0;
+        transition: all 0.75s ease-in-out;
+    }
+}
 .titulo {
     text-align: center;
     font-family: cursive, bold;
-    font-size: 60px;
+    font-size: 200px;
+    transition: all 1s ease-in-out;
+    margin-top: 10%;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}.hidden:hover {
+    opacity: 1;
 }
 
 .container {
@@ -14,7 +29,7 @@
     display: grid;
     place-items: center;
     width: 100%;
-    height: 480px;
+    height: 450px;
 }
 
 #catAndMouse {
@@ -30,7 +45,7 @@
 
 .containerMain {
     width: 100%;
-    height: 480px;
+    height: 460px;
     display: grid;
     place-items: center;
 }
@@ -58,12 +73,57 @@ main {
 
 #jugar {
     border-radius: 20px;
-    background-color: blueviolet;
+    background-color: lightslategray;
     width: 50%;
     height: 15%;
     display: grid;
     place-items: center;
-    font-size: 150%;
+    font-size: 22px;
     font-family: cursive, bold;
     color: white;
+    text-decoration: underline;
+    transition: all 0.35s ease-in-out;
+}#jugar:hover {
+    width: 55%;
+    height: 18%;
+    font-size: 26px;
+    border-radius: 23px;
+}
+
+#perfiles {
+    border-radius: 20px;
+    background-color: lightslategray;
+    width: 50%;
+    height: 15%;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    font-family: cursive, bold;
+    color: white;
+    text-decoration: underline;
+    transition: all 0.35s ease-in-out;
+}#perfiles:hover {
+    width: 55%;
+    height: 18%;
+    font-size: 26px;
+    border-radius: 23px;
+}
+
+#salir {
+    border-radius: 20px;
+    background-color: lightslategray;
+    width: 50%;
+    height: 15%;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    font-family: cursive, bold;
+    color: white;
+    text-decoration: underline;
+    transition: all 0.35s ease-in-out;
+}#salir:hover {
+    width: 55%;
+    height: 18%;
+    font-size: 26px;
+    border-radius: 23px;
 }

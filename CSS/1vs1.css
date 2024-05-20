@@ -1,4 +1,14 @@
 /*//////////////// ESTILOS DE JUEGO ////////////////*/
+#hidden:hover {
+    opacity: 1;
+    transition: all 0.25s ease-in-out;
+}
+
+.containerTittles {
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
 #juegoDefault {
     margin-left: 35%;
     display: grid;
@@ -92,6 +102,7 @@
 
 
 #titulo {
+    font-size: 70px;
     text-align: center;
 }
 
