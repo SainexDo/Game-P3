@@ -1,0 +1,129 @@
+body:hover {
+    .titulo {
+        font-size: 70px;
+        margin-top: 0;
+        transition: all 0.75s ease-in-out;
+    }
+}
+.titulo {
+    text-align: center;
+    font-family: cursive, bold;
+    font-size: 200px;
+    transition: all 1s ease-in-out;
+    margin-top: 10%;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}.hidden:hover {
+    opacity: 1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.containerImg {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 450px;
+}
+
+#catAndMouse {
+    width: 65%;
+    height: 60%;
+    border-radius: 25px;
+    transition: all .40s ease;
+}#catAndMouse:hover {
+    width: 70%;
+    height: 65%;
+    border-radius: 25px;
+}
+
+.containerMain {
+    width: 100%;
+    height: 460px;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    margin-top: 5%;
+    border-radius: 20px;
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all .40s ease;
+    -webkit-box-shadow: -3px 4px 30px 2px rgba(0,0,0,0.65);
+    -moz-box-shadow: -3px 4px 30px 2px rgba(0,0,0,0.65);
+    box-shadow: -3px 4px 30px 2px rgba(0,0,0,0.65);
+}main:hover {
+    width: 75%;
+    height: 85%;
+    -webkit-box-shadow: -3px 6px 38px 6px rgba(0,0,0,0.65);
+    -moz-box-shadow: -3px 6px 38px 6px rgba(0,0,0,0.65);
+    box-shadow: -3px 6px 38px 6px rgba(0,0,0,0.65);
+}
+
+#jugar {
+    border-radius: 20px;
+    background-color: lightslategray;
+    width: 50%;
+    height: 15%;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    font-family: cursive, bold;
+    color: white;
+    text-decoration: underline;
+    transition: all 0.35s ease-in-out;
+}#jugar:hover {
+    width: 55%;
+    height: 18%;
+    font-size: 26px;
+    border-radius: 23px;
+}
+
+#perfiles {
+    border-radius: 20px;
+    background-color: lightslategray;
+    width: 50%;
+    height: 15%;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    font-family: cursive, bold;
+    color: white;
+    text-decoration: underline;
+    transition: all 0.35s ease-in-out;
+}#perfiles:hover {
+    width: 55%;
+    height: 18%;
+    font-size: 26px;
+    border-radius: 23px;
+}
+
+#salir {
+    border-radius: 20px;
+    background-color: lightslategray;
+    width: 50%;
+    height: 15%;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    font-family: cursive, bold;
+    color: white;
+    text-decoration: underline;
+    transition: all 0.35s ease-in-out;
+}#salir:hover {
+    width: 55%;
+    height: 18%;
+    font-size: 26px;
+    border-radius: 23px;
+}

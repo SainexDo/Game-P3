@@ -1,0 +1,81 @@
+#juegoDefault {
+    margin-left: 35%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 30%;
+    height: 350px;
+    max-height: fit-content;
+    margin-top: 5%;
+    background-color: #ecf0f1;
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    border-radius: 12px;
+    font-size: 45px;
+    font-family: impact;
+}
+
+#cuadrito1 {
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: solid;
+}
+
+#cuadrito2 {
+display: flex;
+justify-content: center;
+align-items: center;
+border-left: solid;
+border-right: solid;
+border-bottom: solid;
+}
+
+#cuadrito3 {
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: solid;
+}
+
+#cuadrito4 {
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: solid;
+}
+
+#cuadrito5 {
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: solid;
+border-left: solid;
+border-right: solid;
+}
+
+#cuadrito6 {
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: solid;
+}
+
+#cuadrito7 {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#cuadrito8 {
+display: flex;
+justify-content: center;
+align-items: center;
+border-right: solid;
+border-left: solid 2px;
+}
+
+#cuadrito9 {
+display: flex;
+justify-content: center;
+align-items: center;
+}
