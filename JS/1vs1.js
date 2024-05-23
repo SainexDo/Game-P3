@@ -142,9 +142,7 @@ function c4vez() {
         clave4 = false;
     }
     if (segundaFila(matriz)) {
-        alert("HAS GANADO !!")
-                tt = null;
-                                empatar = false;
+        alert ('Has ganado con 2da fila')
     }
     if (primeraColumna(matriz)) {
         alert("HAS GANADO !!")
@@ -171,9 +169,7 @@ function c5vez() {
         clave5 = false;
     }
     if (segundaFila(matriz)) {
-        alert("HAS GANADO !!")
-                tt = null;
-                                empatar = false;
+        alert ('Has ganado con 2da fila')
     }
     if (segundaColumna(matriz)) {
         alert("HAS GANADO !!")
@@ -309,7 +305,6 @@ function c9vez() {
                 tt = null;
                 empatar = false;    // dando una alerta de que se ha ganado.
     }
-
 }
 
 function primeraFila(matriz) {
@@ -388,13 +383,13 @@ function primeraDiagonal(matriz) {
 
 
 function segundaDiagonal(matriz) {
-    let contadorX_Diagonal2 = 0;
-    let contadorO_Diagonal2 = 0;
+    let contadorX_Diagonal2 = '';
+    let contadorO_Diagonal2 = '';
 
-    for (let di1 = 0; di1 < matriz.length; di1++) {
-        if (matriz[2][0][di1] == 'X' && matriz[1][1][di1] == 'X' && matriz[0][2][di1] == 'X') {
+    for (let i = 0; i < matriz.length; i++) {
+        if (matriz[2][0][i] == 'X' && matriz[1][1][i] == 'X' && matriz[0][2][i] == 'X') {
             contadorX_Diagonal2 = 'Ganar';
-        }else if (matriz[2][0][di1] == 'O' && matriz[1][1][di1] == 'O' && matriz[0][2][di1] == 'O') {
+        }else if (matriz[2][0][i] == 'O' && matriz[1][1][i] == 'O' && matriz[0][2][i] == 'O') {
             contadorO_Diagonal2 = 'Ganar';
         }
     }
