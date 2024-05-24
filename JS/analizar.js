@@ -49,6 +49,7 @@ function checkGanador() {
     }
     return '';
 }
+
 array.forEach((element, index) => {
     element.addEventListener('click', () => {
         if (turnoJugador && hacerMovimiento(index, 'X')) {
