@@ -1,3 +1,4 @@
+
 body:hover {
     .titulo {
         font-size: 80px;
@@ -24,6 +25,7 @@ body:hover {
 .container {
     display: grid;
     grid-template-columns: 60% 40%;
+    margin-top: 2%;
 }
 
 .containerImg {
@@ -74,7 +76,7 @@ main {
     box-shadow: -3px 6px 38px 6px rgba(0,0,0,0.65);
 }
 
-#jugar {
+#PvsP {
     border-radius: 20px;
     background-color: lightslategray;
     width: 50%;
@@ -86,14 +88,14 @@ main {
     color: white;
     text-decoration: underline;
     transition: all 0.35s ease-in-out;
-}#jugar:hover {
+}#PvsP:hover {
     width: 55%;
     height: 18%;
     font-size: 26px;
     border-radius: 23px;
 }
 
-#perfiles {
+#vsIA {
     border-radius: 20px;
     background-color: lightslategray;
     width: 50%;
@@ -105,7 +107,7 @@ main {
     color: white;
     text-decoration: underline;
     transition: all 0.35s ease-in-out;
-}#perfiles:hover {
+}#vsIA:hover {
     width: 55%;
     height: 18%;
     font-size: 26px;

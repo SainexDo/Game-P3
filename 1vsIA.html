@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <video autoplay muted loop class="videoFondo">
+        <source src="video/magikarp-x-gyarados-pokemon-moewalls-com.mp4" type="video/mp4">
+    </video>
 
     <div id="juegoDefault">
         <div class="cuadritos" fila="0" columna="0" id="cuadrito1"></div>
@@ -23,10 +26,14 @@
         <div class="cuadritos" fila="2" columna="1" id="cuadrito8"></div>
         <div class="cuadritos" fila="2" columna="2" id="cuadrito9"></div>
     </div>
+    <div id="containerWinner">
+        <div id="winner"></div>
+    </div>
 
     <button id="borrar">Borrar</button>
 
     <script src="JS/1vsIA.js"></script>
+
 </body>
 
 </html>
