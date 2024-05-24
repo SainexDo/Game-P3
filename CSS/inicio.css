@@ -1,10 +1,12 @@
+
 body:hover {
     .titulo {
-        font-size: 70px;
+        font-size: 80px;
         margin-top: 0;
         transition: all 0.75s ease-in-out;
     }
 }
+
 .titulo {
     text-align: center;
     font-family: cursive, bold;
@@ -23,6 +25,7 @@ body:hover {
 .container {
     display: grid;
     grid-template-columns: 60% 40%;
+    margin-top: 2%;
 }
 
 .containerImg {
@@ -30,6 +33,7 @@ body:hover {
     place-items: center;
     width: 100%;
     height: 450px;
+    margin-top: 15%;
 }
 
 #catAndMouse {
@@ -48,10 +52,10 @@ body:hover {
     height: 460px;
     display: grid;
     place-items: center;
+    margin-top: 15%;
 }
 
 main {
-    margin-top: 5%;
     border-radius: 20px;
     width: 70%;
     height: 80%;
@@ -59,19 +63,20 @@ main {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    transition: all .40s ease;
+    transition: all .30s ease;
     -webkit-box-shadow: -3px 4px 30px 2px rgba(0,0,0,0.65);
-    -moz-box-shadow: -3px 4px 30px 2px rgba(0,0,0,0.65);
+    -moz-box-shadow: -3px 4px 20px 2px rgba(0,0,0,0.65);
     box-shadow: -3px 4px 30px 2px rgba(0,0,0,0.65);
+    margin-top: 5%;
 }main:hover {
-    width: 75%;
-    height: 85%;
+    width: 72%;
+    height: 83%;
     -webkit-box-shadow: -3px 6px 38px 6px rgba(0,0,0,0.65);
     -moz-box-shadow: -3px 6px 38px 6px rgba(0,0,0,0.65);
     box-shadow: -3px 6px 38px 6px rgba(0,0,0,0.65);
 }
 
-#jugar {
+#PvsP {
     border-radius: 20px;
     background-color: lightslategray;
     width: 50%;
@@ -83,14 +88,14 @@ main {
     color: white;
     text-decoration: underline;
     transition: all 0.35s ease-in-out;
-}#jugar:hover {
+}#PvsP:hover {
     width: 55%;
     height: 18%;
     font-size: 26px;
     border-radius: 23px;
 }
 
-#perfiles {
+#vsIA {
     border-radius: 20px;
     background-color: lightslategray;
     width: 50%;
@@ -102,7 +107,7 @@ main {
     color: white;
     text-decoration: underline;
     transition: all 0.35s ease-in-out;
-}#perfiles:hover {
+}#vsIA:hover {
     width: 55%;
     height: 18%;
     font-size: 26px;
@@ -126,4 +131,16 @@ main {
     height: 18%;
     font-size: 26px;
     border-radius: 23px;
+}
+
+#option1 {
+
+}
+
+#option2 {
+    
+}
+
+#option3 {
+    
 }

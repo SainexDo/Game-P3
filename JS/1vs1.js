@@ -3,7 +3,7 @@ let c2 = document.getElementById('cuadrito2')
 let c3 = document.getElementById('cuadrito3')
 let c4 = document.getElementById('cuadrito4')
 let c5 = document.getElementById('cuadrito5')
-let c6 = document.getElementById('cuadrito6')
+let c6 = document.getElementById('cuadrito6')  // llamo a todos los cuadritos
 let c7 = document.getElementById('cuadrito7')
 let c8 = document.getElementById('cuadrito8')
 let c9 = document.getElementById('cuadrito9')
@@ -11,44 +11,43 @@ let c9 = document.getElementById('cuadrito9')
 
 let matriz = [
     [c1, c2, c3],
-    [c4, c5, c6],
+    [c4, c5, c6],  // Genero una matriz
     [c7, c8, c9]
 ]
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 
-let tt = true;
-
-let clave1 = true;
+let tt = true; // Aquí declaro una varíable que me va a funcionar como flag para que vaya cambiando el signo que se escribe entre 'X' y 'O'
+let clave1 = true;  // Esto lo llamo como clave porque es lo que permite que se active la funcion, y luego de usarse una vez, se cambia la flag y la funcion queda desactivada.
 
 function c1vez() {
-    if (clave1 === true) {
+    if (clave1 === true) { // Aqui se hacen las validacion de la clave y el cambiador de simbolos (clave1, tt)
         if (tt === true) {
             matriz[0][0] = 'X';
             c1.innerHTML = 'X'
             tt = false;
         } else if (tt == false) {
-            matriz[0][0] = "O"
+            matriz[0][0] = "O"  // aqui le indico que escriba en la matriz
            
-            c1.innerHTML = 'O'
+            c1.innerHTML = 'O' // aqui le indico que ecriba en el cuadrito1 de la página
 
             tt = true;
         }
 
-        clave1 = false;
+        clave1 = false; // aqui se desactiva la flag
     }
     if (primeraFila(matriz)) {
         alert("HAS GANADO !!")
                 tt = null;
                                 empatar = false;
     }
-    if (primeraDiagonal(matriz)) {  // Aquí es donde se llama la funcion que contiene el for y contadores
+    if (primeraDiagonal(matriz)) {  // Aquí es donde se llama la funcion que contiene el for y contadores, validacion de gane
         alert("HAS GANADO !!")
                 tt = null;
                                 empatar = false;    // dando una alerta de que se ha ganado.
     }
-    if (primeraColumna(matriz)) {
+    if (primeraColumna(matriz)) { //aqui se valida la primera columna
         alert("HAS GANADO !!")
                 tt = null;
                 empatar = false;
@@ -142,9 +141,7 @@ function c4vez() {
         clave4 = false;
     }
     if (segundaFila(matriz)) {
-        alert("HAS GANADO !!")
-                tt = null;
-                                empatar = false;
+        alert ('Has ganado con 2da fila')
     }
     if (primeraColumna(matriz)) {
         alert("HAS GANADO !!")
@@ -171,9 +168,7 @@ function c5vez() {
         clave5 = false;
     }
     if (segundaFila(matriz)) {
-        alert("HAS GANADO !!")
-                tt = null;
-                                empatar = false;
+        alert ('Has ganado con 2da fila')
     }
     if (segundaColumna(matriz)) {
         alert("HAS GANADO !!")
@@ -309,7 +304,6 @@ function c9vez() {
                 tt = null;
                 empatar = false;    // dando una alerta de que se ha ganado.
     }
-
 }
 
 function primeraFila(matriz) {
@@ -388,13 +382,13 @@ function primeraDiagonal(matriz) {
 
 
 function segundaDiagonal(matriz) {
-    let contadorX_Diagonal2 = 0;
-    let contadorO_Diagonal2 = 0;
+    let contadorX_Diagonal2 = '';
+    let contadorO_Diagonal2 = '';
 
-    for (let di1 = 0; di1 < matriz.length; di1++) {
-        if (matriz[2][0][di1] == 'X' && matriz[1][1][di1] == 'X' && matriz[0][2][di1] == 'X') {
+    for (let i = 0; i < matriz.length; i++) {
+        if (matriz[2][0][i] == 'X' && matriz[1][1][i] == 'X' && matriz[0][2][i] == 'X') {
             contadorX_Diagonal2 = 'Ganar';
-        }else if (matriz[2][0][di1] == 'O' && matriz[1][1][di1] == 'O' && matriz[0][2][di1] == 'O') {
+        }else if (matriz[2][0][i] == 'O' && matriz[1][1][i] == 'O' && matriz[0][2][i] == 'O') {
             contadorO_Diagonal2 = 'Ganar';
         }
     }
@@ -472,33 +466,3 @@ function empate(matriz) {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-// matriz[0][0][i] != '' && matriz[0][1][i] != '' && matriz[0][2][i] != '' && matriz[1][0][i] != '' && matriz[1][1][i] != '' && matriz[1][2][i] != '' && matriz[2][0][i] != '' && matriz[2][1][i] != '' && matriz[2][2][i] != ''
-
-
-
-
-
-
-
-// const matri = [
-//     [1, 2, 3]
-//     [4, 5, 6]
-//     [7, 8, 9]
-// ];
-
-
-// matriz[0][0] = "X"
-
-
-
-//Aquí lo que se estuvo haciendo es mostrar las coordenadas, de hecho,
-//si marco posiciones [1][2] = "O" se marcará una "O" en la posición 7.

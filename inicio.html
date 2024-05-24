@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="CSS/inicio.css">
 </head>
 <body>
@@ -13,7 +13,6 @@
         <div class="titulo">Tic Tac Toe</div>
     </nav>
 
-
     <div id="contenido" class="hidden">
         <div class="container">
             <div class="containerImg">
@@ -21,12 +20,18 @@
             </div>
             <div class="containerMain">
                 <main>
-                    <a id="jugar" href="1vs1.html">Jugar</a>
-                    <a id="perfiles" href="1vsIA.html">IA</a>
-                    <div id="salir" onclick="window.close()">Salir</div>
+                    <a href="1vs1.html" id="PvsP">1vs1</a>
+                    <a id="vsIA" href="1vsIA.html">vs IA</a>
+                    <div id="salir" onclick=window.close()>Salir</div>
                 </main>
             </div>
         </div>
     </div>
+
+    <dialog id="perfil">
+        <div id="option1">Rose</div>
+        <div id="option2">Green</div>
+        <div id="option3">White</div>
+    </dialog>
 </body>
 </html>

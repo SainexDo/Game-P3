@@ -9,28 +9,31 @@
 </head>
 
 <body>
-
-
-
+    <video autoplay muted loop class="videoFondo">
+        <source src="video/magikarp-x-gyarados-pokemon-moewalls-com.mp4" type="video/mp4">
+    </video>
 
     <div id="juegoDefault">
-        <div onclick="c1vez()" id="cuadrito1"></div>
-        <div onclick="c2vez()" id="cuadrito2"></div>
-        <div onclick="c3vez()" id="cuadrito3"></div>
+        <div class="cuadritos" fila="0" columna="0" id="cuadrito1"></div>
+        <div class="cuadritos" fila="0" columna="1" id="cuadrito2"></div>
+        <div class="cuadritos" fila="0" columna="2" id="cuadrito3"></div>
 
-        <div onclick="c4vez()" id="cuadrito4"></div>
-        <div onclick="c5vez()" id="cuadrito5"></div>
-        <div onclick="c6vez()" id="cuadrito6"></div>
+        <div class="cuadritos" fila="1" columna="0" id="cuadrito4"></div>
+        <div class="cuadritos" fila="1" columna="1" id="cuadrito5"></div>
+        <div class="cuadritos" fila="1" columna="2" id="cuadrito6"></div>
 
-        <div onclick="c7vez()" id="cuadrito7"></div>
-        <div onclick="c8vez()" id="cuadrito8"></div>
-        <div onclick="c9vez()" id="cuadrito9"></div>
+        <div class="cuadritos" fila="2" columna="0" id="cuadrito7"></div>
+        <div class="cuadritos" fila="2" columna="1" id="cuadrito8"></div>
+        <div class="cuadritos" fila="2" columna="2" id="cuadrito9"></div>
+    </div>
+    <div id="containerWinner">
+        <div id="winner"></div>
     </div>
 
-    <button onclick="validar(matriz)">HEHE</button>
-
+    <button id="borrar">Borrar</button>
 
     <script src="JS/1vsIA.js"></script>
+
 </body>
 
 </html>

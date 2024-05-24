@@ -1,236 +1,116 @@
-let c1 = document.getElementById('cuadrito1');
-let c2 = document.getElementById('cuadrito2');
-let c3 = document.getElementById('cuadrito3');
-let c4 = document.getElementById('cuadrito4');
-let c5 = document.getElementById('cuadrito5');
-let c6 = document.getElementById('cuadrito6');
-let c7 = document.getElementById('cuadrito7');
-let c8 = document.getElementById('cuadrito8');
-let c9 = document.getElementById('cuadrito9');
+let cuadritos = document.getElementsByClassName('cuadritos'); // Llamo a la clase que tienen todas las celdas en HTML
+let borrar = document.getElementById('borrar'); // Aqui llamo al boton al que le pondré la funcion de borrar, que lo que hará será refrescar la página
+let winner = document.getElementById('winner') // Aquí se llama al espacio de texto que se coloca cuando alguien gana o empata.
 
 let matriz = [
     ['', '', ''],
+    ['', '', ''],  // Esto es una matriz, generada para permitir validaciones de gane de una forma más certera más adelante.
     ['', '', ''],
-    ['', '', ''],
-]
+];
 
-let P1 = true;
-let IA = false;
+let validaComienzo = true; // flag para controlar el inicio de la funcion (creo que es algo innecesaria)
+let acabaJuego = false; // flag para controlar si el juego ha terminado
 
-
-let array = [c1, c2, c3, c4, c5, c6, c7, c8, c9]
-
-function juegoIA(array) {
-    index = Math.floor(Math.random() * 9)
-    setTimeout(() => {
-        array[index].innerHTML = 'O';
-        console.log(array[index]);
-        
-        tt = true;
-    }, 1000);
-}
-
-
-
-
-
-
-
-
-
-let tt = true;
-
-let clave1 = true;
-
-function c1vez() {
-    if (clave1 === true) {
-        if (tt === true) {
-            matriz[0][0] = 'X';
-            c1.innerHTML = 'X'
-            tt = false;
-        } else if (tt == false) {
-            matriz[0][0] = "O"
-           
-            c1.innerHTML = 'O'
-
-            tt = true;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function juegoIA(cuadritos) {  // Esta es la funcion que controla todo el movimiento de la IA, misma funcion que llamo siempre que yo escrba para que se actiive ddespués de cada movimiento que haga
+    if (validaComienzo === true && !acabaJuego) {  // validacion necesaria para controlar l
+        for (let index = 0; index < 100; index++) { //hago un for que se encargará de repetir un proceso de busqueda en caso de que no se encuentre una casilla vacía.
+            let numAleatorio = Math.floor(Math.random() * 9); // Aquí se hace una función importante de la maquina ya que elige un número random que luego funcionará como posición para que el bot (IA) pueda escribir.
+            if (cuadritos[numAleatorio].textContent === "") {  // aquí se valida si el espacio en el que la IA quiere escribir de manera random, está vacío, si no es así, el ciclo del for se vuelve a hacer, hasta encontrar un espacio vacío.
+                let fila = cuadritos[numAleatorio].getAttribute('fila'); // Aquí obtengo los atributos desde el html.
+                let columna = cuadritos[numAleatorio].getAttribute('columna'); // Aquí obtengo los atributos desde el html.
+                matriz[fila][columna] = '👾' //Aquí se escribe en la matriz para que luego las validaciones se puedan realizar correctamente.
+                cuadritos[numAleatorio].innerHTML = '👾'; // Esto es lo que escribe a nivel visual dentro de la página
+                break; // aquí se para el ciclo for si ya se validó todo bien.
+            }
+        }console.log(matriz);
+        if (ganeIA(matriz)) { // llamo la funcion de la IA
+            validaComienzo = false;
+            acabaJuego = true; // El juego ha terminado
+            winner.innerHTML = 'Gana 👾'
+            return;
         }
-
-        clave1 = false;
-    }
-    juegoIA(array) 
-}
-
-
-
-let clave2 = true;
-
-function c2vez() {
-    if (clave2 === true) {
-        if (tt === true) {
-            matriz[0][1] = "X"
-            c2.innerHTML = 'X'
-            tt = false;
-        } else {
-            matriz[0][1] = "O"
-            c2.innerHTML = 'O'
-            tt = true;
+        if (empate(matriz)) { // Llamo a la función de empate
+            acabaJuego = true; // El juego ha terminado
+            winner.innerHTML = '¡Han empatado!'
+            return;
         }
-        clave2 = false;
     }
-    juegoIA(array) 
 }
 
 
-let clave3 = true;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let fr = true; // lo mismo, esto es una flag
+if (fr === true) { // validacion de la flag
+    for (let index = 0; index < cuadritos.length; index++) { //hago un for para contar los cuadritos
+        cuadritos[index].addEventListener('click', function (evento) {
+            if (fr && !acabaJuego) {
+                if (cuadritos[index].textContent === "") {
+                    let fila = cuadritos[index].getAttribute('fila'); // Aquí obtengo los atributos desde el html.
+                    let columna = cuadritos[index].getAttribute('columna'); // Aquí obtengo los atributos desde el html.
+                    matriz[fila][columna] = '😶‍🌫️'; //Aquí se escribe en la matriz para que luego las validaciones se puedan realizar correctamente.
+                    if (cuadritos[index] !== '') { // validación de que el espacio en el qu se vaya a escribir.
+                        cuadritos[index].innerHTML = '😶‍🌫️';
+                        setTimeout(() => {
+                            juegoIA(cuadritos); // aquí llamo a que se haga la función de la IA para que se haga luego de que yo toque.
+                        }, 300);
+                    }
+                }
+            }
+            if (ganeYo(matriz)) {
+                fr = false;
+                acabaJuego = true; // El juego ha terminado
+                winner.innerHTML = 'Gana 😶‍🌫️'
+                return;
+            }
+            if (empate(matriz) && !acabaJuego) {
+                winner.innerHTML = '¡Han empatado!'
+                acabaJuego = true; // El juego ha terminado
+                return;
+            }
+        });
+    }
+}
 
-function c3vez() {
-    Math
-    if (clave3 === true) {
-        if (tt === true) {
-            matriz[0][2] = "X"
-            c3.innerHTML = 'X'
-            tt = false;
-        } else if (tt == false) {
-            matriz[0][2] = "O"
-            c3.innerHTML = 'O'
-            tt = true;
+function ganeYo(matriz) {   //Aquí van todas las validaciones.
+    if ((matriz[0][0] === '😶‍🌫️' && matriz[0][1] === '😶‍🌫️' && matriz[0][2] === '😶‍🌫️') || //Fila 1
+        (matriz[1][0] === '😶‍🌫️' && matriz[1][1] === '😶‍🌫️' && matriz[1][2] === '😶‍🌫️') || //Fila 2
+        (matriz[2][0] === '😶‍🌫️' && matriz[2][1] === '😶‍🌫️' && matriz[2][2] === '😶‍🌫️') || //Fila 3
+        (matriz[0][0] === '😶‍🌫️' && matriz[1][1] === '😶‍🌫️' && matriz[2][2] === '😶‍🌫️') || //Diagonal 1
+        (matriz[0][2] === '😶‍🌫️' && matriz[1][1] === '😶‍🌫️' && matriz[2][0] === '😶‍🌫️') || //Diagonal 2
+        (matriz[0][0] === '😶‍🌫️' && matriz[1][0] === '😶‍🌫️' && matriz[2][0] === '😶‍🌫️') || //Columna 1
+        (matriz[0][1] === '😶‍🌫️' && matriz[1][1] === '😶‍🌫️' && matriz[2][1] === '😶‍🌫️') || //Columna 2
+        (matriz[0][2] === '😶‍🌫️' && matriz[1][2] === '😶‍🌫️' && matriz[2][2] === '😶‍🌫️')) { //Columna 3
+        return true;
+    }
+    return false;
+}
+
+function ganeIA(matriz) {    //Aquí van todas las validaciones, de nuevo.
+    if ((matriz[0][0] === '👾' && matriz[0][1] === '👾' && matriz[0][2] === '👾') || //Fila 1
+        (matriz[1][0] === '👾' && matriz[1][1] === '👾' && matriz[1][2] === '👾') || //Fila 2
+        (matriz[2][0] === '👾' && matriz[2][1] === '👾' && matriz[2][2] === '👾') || //Fila 3
+        (matriz[0][0] === '👾' && matriz[1][1] === '👾' && matriz[2][2] === '👾') || //Diagonal 1
+        (matriz[0][2] === '👾' && matriz[1][1] === '👾' && matriz[2][0] === '👾') || //Diagonal 2
+        (matriz[0][0] === '👾' && matriz[1][0] === '👾' && matriz[2][0] === '👾') || //Columna 1
+        (matriz[0][1] === '👾' && matriz[1][1] === '👾' && matriz[2][1] === '👾') || //Columna 2
+        (matriz[0][2] === '👾' && matriz[1][2] === '👾' && matriz[2][2] === '👾')) { //Columna 3
+        return true;  //Aquí se retornará como verdadera la función si alguna de estas validaciones son correctas.
+    }
+    return false;    //Aquí se retornará como falsa la función si ninguna de estas validaciones son correctas.
+}
+
+function empate(matriz) {  //Funcion que valida un empate
+    for (let i = 0; i < matriz.length; i++) {  //Un primer for que recorre la matriz y encuentra la posición 0, 1, 2 de la matriz.
+        for (let j = 0; j < matriz[i].length; j++) { // Ya que el primer for ha encontrado esas posiciones, este sguiente for se encargará de buscar dentro de esas posiciones, encontrando la posición 0, 1, y 2 dentro de cada pocisión 0, 1, 2 del anterior for. 
+            if (matriz[i][j] === '') { // aquí se busca validar si toda la matriz es igual a vacío, por eso se ocupaba el doble for, para buscar en absolutamente todas las posiciones con presición.
+                return false; //Retorna falso para que la validación no se active mientras están vacíos.
+            }
         }
-        clave3 = false;
     }
-    juegoIA(array)  
+    return true; //retorna verdadero para que la función se active, ya que la validación anterior ya no dará un resultado en false, porque se supone que en algún momento se llenarán todas las celdas para así dar un empate.
 }
 
-
-let clave4 = true;
-
-function c4vez() {
-    if (clave4 === true) {
-        if (tt === true) {
-            matriz[1][0] = "X"
-            c4.innerHTML = 'X'
-            tt = false;
-        } else if (tt == false) {
-            matriz[1][0] = "O"
-            c4.innerHTML = 'O'
-            tt = true;
-                            empatar = false;
-        }
-        clave4 = false;
-    }
-    juegoIA(array)  
-}
-    
-
-
-let clave5 = true;
-
-function c5vez() {
-    if (clave5 === true) {
-        if (tt === true) {
-            matriz[1][1] = "X"
-            c5.innerHTML = 'X'
-            tt = false;
-        } else  {
-            matriz[1][1] = 'O'
-            c5.innerHTML = 'O'
-            tt = true;
-        }
-        clave5 = false;
-    }
-    juegoIA(array)  
-}
-
-
-let clave6 = true;
-
-function c6vez() {
-    if (clave6 === true) {
-        if (tt === true) {
-            matriz[1][2] = "X"
-            c6.innerHTML = 'X'
-            tt = false;
-        } else if (tt == false) {
-            matriz[1][2] = "O"
-            c6.innerHTML = 'O'
-            tt = true;
-        }
-        clave6 = false;
-    }
-    juegoIA(array)  
-}
-
-let clave7 = true;
-
-function c7vez() {
-    if (clave7 === true) {
-        if (tt === true) {
-            matriz[2][0] = "X"
-            c7.innerHTML = 'X'
-            tt = false;
-        } else if (tt == false) {
-            matriz[2][0] = "O"
-            c7.innerHTML = 'O'
-            tt = true;
-        }
-        clave7 = false;
-    }
-    juegoIA(array)  
-}
-
-
-let clave8 = true;
-
-
-function c8vez() {
-    if (clave8 === true) {
-        if (tt === true) {
-            matriz[2][1] = "X"
-            c8.innerHTML = 'X'
-            tt = false;
-        } else if (tt == false) {
-            matriz[2][1] = "O"
-            c8.innerHTML = 'O'
-            tt = true;
-        }
-        clave8 = false;
-    }
-    juegoIA(array)  
-}
-
-let clave9 = true;
-
-function c9vez() {
-    if (clave9 === true) {
-        if (tt === true) {
-            matriz[2][2] = "X"
-            c9.innerHTML = 'X'
-            tt = false;
-        } else if (tt == false) {
-            matriz[2][2] = "O"
-            c9.innerHTML = 'O'
-            tt = true;
-        }
-        clave9 = false;
-    }
-    juegoIA(array)  
-}
-
-
-
-let contadorX = 0;
-let contadorO = 0;
-
-for (let index = 0; index < matriz.length; index++) {
-    if (matriz[0][index] == "X") {
-        contadorX++;
-    }else if (matriz[0][index] == "O") {
-        contadorO++;
-    }console.log(contadorX);
-}
-if (contadorX == 3 || contadorO == 3) {
-
-}else{
-    
-}
-
+borrar.addEventListener('click', function () {
+    location.reload()                      // Esto da la sensación de que todo se borra, ya que refresca la página.
+})
